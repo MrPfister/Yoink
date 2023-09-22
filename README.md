@@ -8,8 +8,10 @@ This is a brute force approach and technical example of how easy it is to bypass
 
 For example, if a module implemented:
 
+```python
 def valid_user(username: str, password: str) -> bool:
   ...Do logic
   return False
+```
 
 Yoink can detect this function is performing a security operation by its __code__ co_varnames signature and wrap it, thus potentially bypassing security checks .
